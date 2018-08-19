@@ -1,0 +1,36 @@
+﻿1.state数据
+2.JSX模板
+
+3.数据+模板 生成第一个虚拟DOM（就是一个JS对象，用它来描述真实的Dom）【损耗了很小性能】
+['div',{id: 'abc'},['span',{},'hi']]
+
+4.用虚拟DOM结构生成真实DOM 来显示 <div id='abc'><span>hi</span></div>（Mount）
+
+5.state发生变化
+
+6.数据+模板生成新的虚拟DOM【极大提升性能】
+['div',{id: 'abc'},['span',{},'bey bey']]
+
+7.最新虚拟DOM与上一个虚拟DOM比较，找出span内容中的区别 【极大提升性能】
+
+8.直接操作DOM，改变span中的内容
+
+优点：
+1.性能提升
+2.使得跨端得以实现。React Native
+
+------------------------------------------------------------------------------------------------------------------------
+
+react使用的第三方库、工具集合：
+
+1.Charles工具用于mock模拟数据和网络抓包
+
+2.axios库：实现ajax请求
+
+3.antd库：中后台的UI组件
+
+4、react developer tools：chrome插件，用于组件的props和state的状态查看
+
+5、redux库：通过创建store，来预测管理react的state的数据状态
+
+6、redux devtools: chrome插件，用于react所有数据的查看和调试
